@@ -1,0 +1,132 @@
+/* Main dashboard container */
+.patient-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Header section */
+.dashboard-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Summary cards */
+.dashboard-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+    font-size: 2.5rem;
+    margin: 0 0 5px 0;
+    color: #3498db;
+}
+
+.summary-card p {
+    margin: 0;
+    color: #95a5a6;
+    font-weight: 500;
+}
+
+.summary-card.cta {
+    background-color: #3498db;
+    cursor: pointer;
+}
+
+.summary-card.cta a {
+    text-decoration: none;
+}
+
+.summary-card.cta h3,
+.summary-card.cta p {
+    color: #ffffff;
+}
+
+.summary-card.cta h3 {
+    font-size: 1.5rem;
+}
+
+/* Upcoming appointments section */
+.upcoming-appointments {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.upcoming-appointments h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.appointment-details,
+.appointment-time {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.appointment-details strong {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.appointment-details span {
+    color: #7f8c8d;
+}
+
+.appointment-time {
+    text-align: right;
+}
+
+.view-all-link {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.view-all-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}

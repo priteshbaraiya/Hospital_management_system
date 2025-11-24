@@ -1,0 +1,117 @@
+.my-appointments-container {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+.appointments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.appointments-header h2 {
+    margin: 0;
+}
+
+.appointments-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.appointments-controls .form-select {
+    width: auto;
+}
+
+.appointments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.appointment-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.appointment-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.appointment-card .card-header h5 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.appointment-card .card-body {
+    padding: 1.5rem;
+}
+
+.appointment-card .card-body p {
+    margin-bottom: 0.75rem;
+    color: #6c757d;
+}
+
+.appointment-card .card-body p strong {
+    color: #495057;
+}
+
+.appointment-card .card-footer {
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    text-align: right;
+}
+
+.no-appointments-card {
+    grid-column: 1 / -1; /* Span full width */
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.no-appointments-card h4 {
+    margin-bottom: 1rem;
+}
+
+.no-appointments-card p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Reusing status badge styles from other components */
+.status-badge {
+    padding: 0.3em 0.6em;
+    border-radius: 0.25rem;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+}
+.status-pending { background-color: #ffc107; color: #000; }
+.status-approved { background-color: #198754; }
+.status-cancelled { background-color: #dc3545; }
+.status-completed { background-color: #6c757d; }
